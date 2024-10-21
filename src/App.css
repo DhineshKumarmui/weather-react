@@ -1,38 +1,70 @@
-.App {
-  text-align: center;
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: url('./pexels-eberhardgross-2310713.jpg') no-repeat center center fixed; /* Add your image URL */
+    background-size: cover; /* Ensure the image covers the whole area */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+.check-your-weather {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+    justify-content: center; /* Center items vertically */
+    gap: 20px; /* Space between items */
+    padding: 20px; /* Add some padding */
+    border-radius: 8px; /* Rounded corners */
+    max-width: 400px; /* Limit width */
+    margin: auto; /* Center horizontally */
+    height: 100vh; /* Full height */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.check-your-weather button {
+    padding: 10px 20px; /* Button padding */
+    font-size: 16px; /* Button font size */
+    cursor: pointer; /* Change cursor on hover */
+    border: none; /* Remove default border */
+    border-radius: 4px; /* Rounded corners */
+    background-color: #007bff; /* Primary button color */
+    color: white; /* Text color */
+    transition: background-color 0.3s, transform 0.2s; /* Smooth transition */
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.check-your-weather button:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+    transform: scale(1.05); /* Slightly enlarge button */
 }
 
-.App-link {
-  color: #61dafb;
+.display-location,
+.display-weather {
+    text-align: center; /* Center text in sections */
+    border: 1px solid #e0e0e0; /* Light border around sections */
+    padding: 15px; /* Padding inside the box */
+    border-radius: 8px; /* Rounded corners */
+    background-color: #f9f9f9; /* Light background for contrast */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: box-shadow 0.3s; /* Smooth shadow transition */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.display-location:hover,
+.display-weather:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Darker shadow on hover */
+}
+
+.display-location h1,
+.display-weather h1 {
+    font-size: 20px; /* Larger font size for headings */
+    margin-bottom: 10px; /* Space below heading */
+}
+
+.display-weather p {
+    margin: 5px 0; /* Space between paragraphs */
+    font-size: 16px; /* Consistent font size */
+}
+
+/* Optional: Add some responsive design */
+@media (max-width: 600px) {
+    .check-your-weather {
+        width: 90%; /* Full width on small screens */
+    }
 }
