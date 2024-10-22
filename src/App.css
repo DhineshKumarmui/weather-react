@@ -1,10 +1,9 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background: url('./pexels-eberhardgross-2310713.jpg') no-repeat center center fixed; /* Add your image URL */
+    background: url('./pexels-eberhardgross-2310713.jpg') no-repeat center center fixed; /* Background image */
     background-size: cover; /* Ensure the image covers the whole area */
 }
-
 
 .check-your-weather {
     display: flex;
@@ -37,7 +36,10 @@ body {
 
 .display-location,
 .display-weather {
-    text-align: center; /* Center text in sections */
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+    justify-content: center; /* Center items vertically */
     border: 1px solid #e0e0e0; /* Light border around sections */
     padding: 15px; /* Padding inside the box */
     border-radius: 8px; /* Rounded corners */
@@ -62,9 +64,35 @@ body {
     font-size: 16px; /* Consistent font size */
 }
 
-/* Optional: Add some responsive design */
+.temperature-chart-container {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+    justify-content: center; /* Center items vertically */
+    margin: 5px 0; /* Space between paragraphs */
+    font-size: 16px; /* Consistent font size */
+    min-height: 20vh;
+    border: 1px solid #e0e0e0; /* Light border around sections */
+    padding: 15px; /* Padding inside the box */
+    border-radius: 8px; /* Rounded corners */
+    background-color: #f9f9f9; /* Light background for contrast */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: box-shadow 0.3s; /* Smooth shadow transition */
+}
+
+.temperature-chart-container canvas {
+    width: 100% !important; /* Ensure the canvas takes the full width */
+    height: 100% !important; /* Ensure the canvas takes the full height */
+}
+
+/* Responsive design */
 @media (max-width: 600px) {
-    .check-your-weather {
-        width: 90%; /* Full width on small screens */
+    .check-your-weather,
+    .display-weather {
+        width: 35vh; /* Full width on small screens */
+    }
+    
+    .temperature-chart-container { 
+        width: 35vh; /* Set width to 50% on small screens */
     }
 }
