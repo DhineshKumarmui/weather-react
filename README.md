@@ -1,3 +1,11 @@
+Note: Please follow the below steps before starting to work on this repository.
+
+1. Go to https://home.openweathermap.org/users/sign_up and create your own account.
+2. API key is needed to fetch weather data from the 3rd party API.
+3. To get your API key, click on your username in the top right corner, and then click "my API keys".
+4. Create an API key if it doesn't already exist.
+5. Add the API key to .env file under weather app root folder.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
